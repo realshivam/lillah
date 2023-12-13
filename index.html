@@ -226,6 +226,28 @@
         
       }
 
+      .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (alpha) for transparency */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h5,
+.overlay p {
+  margin: 0;
+}
+
+
 
       /* .custom-radio:last-child {
         border-top-right-radius: 100px; 
@@ -294,7 +316,12 @@
         }
       }
 
-
+      .carousel-item.active .image-wrapper img {
+    transform: scale(1.2); /* Adjust the scale factor for zoom level */
+  }
+  .image-wrapper img {
+    transition: transform 2.2s ease-in-out; /* Adjust the duration and easing as needed */
+  }
     
     </style>
   </head>
@@ -429,7 +456,9 @@
         </figure> -->
        
 
-        <div id="carouselExampleCaptions" class="carousel slide">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <!-- <div id="carouselExampleCaptions" class="carousel slide"> -->
+
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -441,46 +470,46 @@
         <img src="images/bg_1.jpg" class="d-block " style="height: 100vh;
         width: 100%;
         object-fit:fill;"  alt="..." >
-
+<div class="overlay">
+  <h5 style="font-weight : 800 ; font-size: 50px;">Dignity Above All</h5>
+  <p>Some representative placeholder content for the first slide.</p>
+</div>
       </div>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Dignity Above All</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
+      
     </div>
     <div class="carousel-item">
       <div class="image-wrapper bnImg" >
                 <img src="images/bg_2.jpg" class="d-block " style="height: 100vh;
                 width: 100%;
                 object-fit:fill;"  alt="..." >
-
+<div class="overlay">
+  <h5 style="font-weight : 800 ; font-size: 50px;">Dignity Above All</h5>
+  <p>Some representative placeholder content for the first slide.</p>
+</div>
               </div>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Dignity Above All</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
+      
     </div>
     <div class="carousel-item">
       <div class="image-wrapper bnImg" >
                 <img src="images/bg_3.jpg" class="d-block " style="height: 100vh;
                 width: 100%;
                 object-fit:fill;"  alt="..." >
-
+<div class="overlay">
+  <h5 style="font-weight : 800 ; font-size: 50px;">Dignity Above All</h5>
+  <p>Some representative placeholder content for the first slide.</p>
+</div>
               </div>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Dignity Above All</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
+     
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button>
+  </button> -->
 </div>
 
 
@@ -751,14 +780,14 @@
                 <div class="carousel-inner" style="border-radius: 5%;">
                   <div class="carousel-item active">
                     <!-- <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100" alt="..."> -->
-                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="265" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="270" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501"  class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
                     <!-- <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100" alt="..."> -->
-                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="265" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="270" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                   </div>
                 </div>
@@ -772,7 +801,8 @@
                 </button> -->
               </div>
               <div class="post-content">
-                <h3 class="post-title text-center text-capitalize">
+                               <h3 class="post-title text-center text-capitalize" style="font-family :Montserrat, Arial, sans-serif">
+
                   <a href="#" class="mt-2">Save the poor 
                     <br> children from hunger</a>
                 </h3>
@@ -790,7 +820,7 @@
                     "
                   >
                     <span>Fundraiser goal</span>
-                    <span style="color: red;" class="font-weight-bold" >$50,000</span>
+                    <span style="color: red;"  >$ 50, 000</span>
                   </div>
                   <div
                     style="
@@ -802,7 +832,7 @@
                     "
                   >
                     <span>Raised Amount</span>
-                    <span style="color: green" class="font-weight-bold">$50,000</span>
+                    <span style="color: green" >$ 50, 000</span>
                   </div>
                 </div>
                 
@@ -818,15 +848,15 @@
                 <div class="carousel-inner" style="border-radius: 5%;">
                   <div class="carousel-item active">
                     <!-- <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100" alt="..."> -->
-                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="265" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="270" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100 mb-2"  alt="...">
                   </div>
                   <div class="carousel-item">
                     <!-- <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100" alt="..."> -->
-                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="265" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="270" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                   </div>
                 </div>
@@ -840,7 +870,8 @@
                 </button> -->
               </div>
               <div class="post-content">
-                   <h3 class="post-title text-center text-capitalize">
+                                  <h3 class="post-title text-center text-capitalize" style="font-family :Montserrat, Arial, sans-serif">
+
                    <a href="#" class="mt-2">Save the poor 
                     <br> children from hunger</a>
                 </h3>
@@ -858,7 +889,7 @@
                     "
                   >
                     <span>Fundraiser goal</span>
-                    <span style="color: red;" class="font-weight-bold" >$50,000</span>
+                    <span style="color: red;"  >$ 50, 000</span>
                   </div>
                   <div
                     style="
@@ -870,7 +901,7 @@
                     "
                   >
                     <span>Raised Amount</span>
-                                        <span style="color: green" class="font-weight-bold">$50,000</span>
+                                        <span style="color: green" >$ 50, 000</span>
 
                   </div>
                 </div>
@@ -885,15 +916,15 @@
                 <div class="carousel-inner" style="border-radius: 5%;">
                   <div class="carousel-item active">
                     <!-- <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100" alt="..."> -->
-                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="265" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="270" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
                     <!-- <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100" alt="..."> -->
-                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="265" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " width="450" height="270" src="https://www.youtube.com/embed/b3ootXSAaqE?si=fO48NquB04QREsLz&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                   </div>
                 </div>
@@ -907,7 +938,8 @@
                 </button> -->
               </div>
               <div class="post-content">
-                   <h3 class="post-title text-center text-capitalize">
+                                  <h3 class="post-title text-center text-capitalize" style="font-family :Montserrat, Arial, sans-serif">
+
                    <a href="#" class="mt-2">Save the poor 
                     <br> children from hunger</a>
                 </h3>
@@ -925,7 +957,7 @@
                     "
                   >
                     <span>Fundraiser goal</span>
-                    <span style="color: red;" class="font-weight-bold" >$50,000</span>
+                    <span style="color: red;"  >$ 50, 000</span>
                   </div>
                   <div
                     style="
@@ -937,7 +969,7 @@
                     "
                   >
                     <span>Raised Amount</span>
-                                        <span style="color: green" class="font-weight-bold">$50,000</span>
+                                        <span style="color: green" >$ 50, 000</span>
 
                   </div>
                 </div>
@@ -951,13 +983,13 @@
               <div id="carouselExampleAutoplaying" class="carousel slide ml-2 mr-2 mt-2" data-bs-ride="carousel">
                 <div class="carousel-inner" style="border-radius: 5%;">
                   <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100 mb-2" alt="...">
                   </div>
                 </div>
                 <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -970,7 +1002,8 @@
                 </button> -->
               </div>
               <div class="post-content">
-                   <h3 class="post-title text-center text-capitalize">
+                                  <h3 class="post-title text-center text-capitalize" style="font-family :Montserrat, Arial, sans-serif">
+
                    <a href="#" class="mt-2">Save the poor 
                     <br> children from hunger</a>
                 </h3>
@@ -988,7 +1021,7 @@
                     "
                   >
                     <span>Fundraiser goal</span>
-                    <span style="color: red;" class="font-weight-bold" >$50,000</span>
+                    <span style="color: red;"  >$ 50, 000</span>
                   </div>
                   <div
                     style="
@@ -1000,7 +1033,7 @@
                     "
                   >
                     <span>Raised Amount</span>
-                                        <span style="color: green" class="font-weight-bold">$50,000</span>
+                                        <span style="color: green" >$ 50, 000</span>
 
                   </div>
                 </div>
@@ -1014,13 +1047,13 @@
               <div id="carouselExampleAutoplaying" class="carousel slide ml-2 mr-2 mt-2" data-bs-ride="carousel">
                 <div class="carousel-inner" style="border-radius: 5%;">
                   <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100 mb-2" alt="...">
                   </div>
                 </div>
                 <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -1033,7 +1066,8 @@
                 </button> -->
               </div>
               <div class="post-content">
-                   <h3 class="post-title text-center text-capitalize">
+                                  <h3 class="post-title text-center text-capitalize" style="font-family :Montserrat, Arial, sans-serif">
+
                    <a href="#" class="mt-2">Save the poor 
                     <br> children from hunger</a>
                 </h3>
@@ -1051,7 +1085,7 @@
                     "
                   >
                     <span>Fundraiser goal</span>
-                    <span style="color: red;" class="font-weight-bold" >$50,000</span>
+                    <span style="color: red;"  >$ 50, 000</span>
                   </div>
                   <div
                     style="
@@ -1063,7 +1097,7 @@
                     "
                   >
                     <span>Raised Amount</span>
-                                        <span style="color: green" class="font-weight-bold">$50,000</span>
+                                        <span style="color: green" >$ 50, 000</span>
 
                   </div>
                 </div>
@@ -1077,13 +1111,13 @@
               <div id="carouselExampleAutoplaying" class="carousel slide ml-2 mr-2 mt-2" data-bs-ride="carousel">
                 <div class="carousel-inner" style="border-radius: 5%;">
                   <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" class="d-block w-100 mb-2" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100" alt="...">
+                    <img style="border-bottom-left-radius: 1rem;border-bottom-right-radius: 1rem; " src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" class="d-block w-100 mb-2" alt="...">
                   </div>
                 </div>
                 <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -1096,7 +1130,8 @@
                 </button> -->
               </div>
               <div class="post-content">
-                   <h3 class="post-title text-center text-capitalize">
+                                  <h3 class="post-title text-center text-capitalize" style="font-family :Montserrat, Arial, sans-serif">
+
                    <a href="#" class="mt-2">Save the poor 
                     <br> children from hunger</a>
                 </h3>
@@ -1114,7 +1149,7 @@
                     "
                   >
                     <span>Fundraiser goal</span>
-                    <span style="color: red;" class="font-weight-bold" >$50,000</span>
+                    <span style="color: red;"  >$ 50, 000</span>
                   </div>
                   <div
                     style="
@@ -1126,7 +1161,7 @@
                     "
                   >
                     <span>Raised Amount</span>
-                                        <span style="color: green" class="font-weight-bold">$50,000</span>
+                                        <span style="color: green" >$ 50, 000</span>
 
                   </div>
                 </div>
