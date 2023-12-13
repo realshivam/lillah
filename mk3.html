@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom Styles */
+      .custom-card {
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        margin-bottom: 20px;
+        background-color: #474747; /* Match the background color of the provided website */
+        color: #ffffff; /* Set text color to white or another suitable color */
+        width: 95%; /* Make the card take the full width of its container */
+        height: 80%;
+      }
+
+      .custom-card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-header {
+        background-color: #313131; /* Darker background for header */
+        padding: 20px;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .card-footer {
+        background-color: #4e4e4e; /* Darker background for footer */
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+      }
+
+      .card-img-top {
+        object-fit: cover;
+        height: 300px; /* Decrease the height as needed */
+        border-radius: 15px 15px 0 0; /* Rounded corners for the top */
+      }
+
+      .slide-container {
+        overflow: hidden;
+        height: 50%;
+      }
+
+      .slide-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide-image {
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .data-block {
+        background-color: #5e5e5e; /* Darker background for data block */
+        padding: 15px;
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+        height: 40%; /* Adjusted height to fit into the card */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid mt-5 ml-0 mr-0">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-3">
+          <div class="card custom-card">
+            <div class="card-header">
+              <!-- <h5 class="card-title">Fundraising Campaign 1</h5> -->
+              <p class="card-text">
+                Closed - Empowerment Drive: $91 Wheelchairs and $71 Sewing
+              </p>
+            </div>
+
+            <div class="slide-container">
+              <div class="slide-wrapper" id="image-slider1">
+                <!-- Replace these image URLs with your own -->
+                <img
+                  src="https://aihms.in/blog/wp-content/uploads/2022/01/dis1-1200x769.jpg"
+                  class="slide-image"
+                  alt="Slide 1"
+                />
+                <img
+                  src="https://savioursfoundation.org/wp-content/uploads/2021/01/ngo-1024x768.jpg"
+                  class="slide-image"
+                  alt="Slide 2"
+                />
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-4u70uaphr0u0pts0lbk5t9j3n6-20170728010817.Medi.jpeg"
+                  class="slide-image"
+                  alt="Slide 3"
+                />
+              </div>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text text-sm-center" style="font-size: small">
+                Title: “Empowerment Drive: Wheelchairs and Sewing Machines for
+                Sindh” Description: Embark on a journey of compassion and
+                empowerment with us as we aim to raise $1,620 to provide 10
+                wheelchairs and 10 sewing machines for the underprivileged
+                individuals in
+              </p>
+              <div class="data-block" style="display: flex">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Fundraiser goal</span>
+                  <span style="color: red">$50,000</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Raised Amount</span>
+                  <span style="color: rgb(129, 255, 50)">$50,000</span>
+                </div>
+              </div>
+              <!-- <div class="data-block">
+               
+
+                <p>
+                  <span class="ml-2" style="font-size: smaller"
+                    >Total Raised: $50,000</span
+                  ><span class="ml-5" style="font-size: smaller">
+                    Goal: $100,000</span
+                  >
+                </p>
+              </div> -->
+            </div>
+
+            <div class="card-footer text-center mt-5">
+              <a href="#" class="btn btn-primary btn-lg">Donate Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+          <div class="card custom-card">
+            <div class="card-header">
+              <!-- <h5 class="card-title">Fundraising Campaign 2</h5> -->
+              <p class="card-text">
+                Closed - Empowerment Drive: $91 Wheelchairs and $71 Sewing
+              </p>
+            </div>
+
+            <div class="slide-container">
+              <div class="slide-wrapper" id="image-slider2">
+                <!-- Replace these image URLs with your own -->
+                <img
+                  src="https://aihms.in/blog/wp-content/uploads/2022/01/dis1-1200x769.jpg"
+                  class="slide-image"
+                  alt="Slide 1"
+                />
+                <img
+                  src="https://savioursfoundation.org/wp-content/uploads/2021/01/ngo-1024x768.jpg"
+                  class="slide-image"
+                  alt="Slide 2"
+                />
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-4u70uaphr0u0pts0lbk5t9j3n6-20170728010817.Medi.jpeg"
+                  class="slide-image"
+                  alt="Slide 3"
+                />
+              </div>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text text-sm-center" style="font-size: small">
+                Title: “Empowerment Drive: Wheelchairs and Sewing Machines for
+                Sindh” Description: Embark on a journey of compassion and
+                empowerment with us as we aim to raise $1,620 to provide 10
+                wheelchairs and 10 sewing machines for the underprivileged
+                individuals in
+              </p>
+              <div class="data-block" style="display: flex">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Fundraiser goal</span>
+                  <span style="color: red">$50,000</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Raised Amount</span>
+                  <span style="color: rgb(129, 255, 50)">$50,000</span>
+                </div>
+              </div>
+              <!-- <div class="data-block">
+               
+
+                <p>
+                  <span class="ml-2" style="font-size: smaller"
+                    >Total Raised: $50,000</span
+                  ><span class="ml-5" style="font-size: smaller">
+                    Goal: $100,000</span
+                  >
+                </p>
+              </div> -->
+            </div>
+
+            <div class="card-footer text-center mt-5">
+              <a href="#" class="btn btn-primary btn-lg">Donate Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+          <div class="card custom-card">
+            <div class="card-header">
+              <!-- <h5 class="card-title">Fundraising Campaign 3</h5> -->
+              <p class="card-text">
+                Closed - Empowerment Drive: $91 Wheelchairs and $71 Sewing
+              </p>
+            </div>
+
+            <div class="slide-container">
+              <div class="slide-wrapper" id="image-slider3">
+                <!-- Replace these image URLs with your own -->
+                <img
+                  src="https://aihms.in/blog/wp-content/uploads/2022/01/dis1-1200x769.jpg"
+                  class="slide-image"
+                  alt="Slide 1"
+                />
+                <img
+                  src="https://savioursfoundation.org/wp-content/uploads/2021/01/ngo-1024x768.jpg"
+                  class="slide-image"
+                  alt="Slide 2"
+                />
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-4u70uaphr0u0pts0lbk5t9j3n6-20170728010817.Medi.jpeg"
+                  class="slide-image"
+                  alt="Slide 3"
+                />
+              </div>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text text-sm-center" style="font-size: small">
+                Title: “Empowerment Drive: Wheelchairs and Sewing Machines for
+                Sindh” Description: Embark on a journey of compassion and
+                empowerment with us as we aim to raise $1,620 to provide 10
+                wheelchairs and 10 sewing machines for the underprivileged
+                individuals in
+              </p>
+              <div class="data-block" style="display: flex">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Fundraiser goal</span>
+                  <span style="color: red">$50,000</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Raised Amount</span>
+                  <span style="color: rgb(129, 255, 50)">$50,000</span>
+                </div>
+              </div>
+              <!-- <div class="data-block">
+               
+
+                <p>
+                  <span class="ml-2" style="font-size: smaller"
+                    >Total Raised: $50,000</span
+                  ><span class="ml-5" style="font-size: smaller">
+                    Goal: $100,000</span
+                  >
+                </p>
+              </div> -->
+            </div>
+
+            <div class="card-footer text-center mt-5">
+              <a href="#" class="btn btn-primary btn-lg">Donate Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3">
+          <div class="card custom-card">
+            <div class="card-header">
+              <!-- <h5 class="card-title">Fundraising Campaign 4</h5> -->
+              <p class="card-text">
+                Closed - Empowerment Drive: $91 Wheelchairs and $71 Sewing
+              </p>
+            </div>
+
+            <div class="slide-container">
+              <div class="slide-wrapper" id="image-slider4">
+                <!-- Replace these image URLs with your own -->
+                <img
+                  src="https://aihms.in/blog/wp-content/uploads/2022/01/dis1-1200x769.jpg"
+                  class="slide-image"
+                  alt="Slide 1"
+                />
+                <img
+                  src="https://savioursfoundation.org/wp-content/uploads/2021/01/ngo-1024x768.jpg"
+                  class="slide-image"
+                  alt="Slide 2"
+                />
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-4u70uaphr0u0pts0lbk5t9j3n6-20170728010817.Medi.jpeg"
+                  class="slide-image"
+                  alt="Slide 3"
+                />
+              </div>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text text-sm-center" style="font-size: small">
+                Title: “Empowerment Drive: Wheelchairs and Sewing Machines for
+                Sindh” Description: Embark on a journey of compassion and
+                empowerment with us as we aim to raise $1,620 to provide 10
+                wheelchairs and 10 sewing machines for the underprivileged
+                individuals in
+              </p>
+              <div class="data-block" style="display: flex">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Fundraiser goal</span>
+                  <span style="color: red">$50,000</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                  "
+                >
+                  <span>Raised Amount</span>
+                  <span style="color: rgb(129, 255, 50)">$50,000</span>
+                </div>
+              </div>
+              <!-- <div class="data-block">
+               
+
+                <p>
+                  <span class="ml-2" style="font-size: smaller"
+                    >Total Raised: $50,000</span
+                  ><span class="ml-5" style="font-size: smaller">
+                    Goal: $100,000</span
+                  >
+                </p>
+              </div> -->
+            </div>
+
+            <div class="card-footer text-center mt-5">
+              <a href="#" class="btn btn-primary btn-lg">Donate Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src=""></script>
+  </body>
+</html>

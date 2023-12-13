@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <link
+      rel="stylesheet"
+      href="css/font-awesome.css"
+    />
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link type="text/css" rel="stylesheet" href="css/all.css" />
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="css/default.css" />
+      <link rel="stylesheet" href="css/custom-style.css" />
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+      <link
+        href="css/gApi.css"
+        rel="stylesheet"
+      />
+      <title>Home - Lillah</title>
+
+      <script>
+        window.dataLayer = window.dataLayer || [];
+  
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+  
+        gtag("config", "G-F2TSSQTNR9");
+      </script>
+    </head>
+    <style>
+      /* Custom Styles */
+      
+      body {
+        background-color: #f1f6ff;
+      }
+
+      #news-slider {
+        margin-top: 80px;
+      }
+
+      .post-slide {
+        background: #fff;
+        margin: 20px 15px 20px;
+        border-radius: 15px;
+        padding-top: 1px;
+        box-shadow: 0px 14px 22px -9px #bbcbd8;
+      }
+
+      .post-slide .post-img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: -12px 15px 8px 15px;
+        margin-left: -10px;
+      }
+
+      .post-slide .post-img img {
+        width: 100%;
+        height: auto;
+        transform: scale(1, 1);
+        transition: transform 0.2s linear;
+      }
+
+      .post-slide:hover .post-img img {
+        transform: scale(1.1, 1.1);
+      }
+
+      .post-slide .over-layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: linear-gradient(
+          -45deg,
+          rgba(6, 190, 244, 0.75) 0%,
+          rgba(45, 112, 253, 0.6) 100%
+        );
+        transition: all 0.5s linear;
+      }
+
+      .post-slide:hover .over-layer {
+        opacity: 1;
+        text-decoration: none;
+      }
+
+      .post-slide .over-layer i {
+        position: relative;
+        top: 45%;
+        text-align: center;
+        display: block;
+        color: #fff;
+        font-size: 25px;
+      }
+
+      .post-slide .post-content {
+        background: #fff;
+        padding: 2px 20px 40px;
+        border-radius: 15px;
+      }
+
+      .post-slide .post-title a {
+        font-size: 15px;
+        font-weight: bold;
+        color: #333;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+      }
+
+      .post-slide .post-title a:hover {
+        text-decoration: none;
+        color: #3498db;
+      }
+
+      .post-slide .post-description {
+        line-height: 24px;
+        color: #808080;
+        margin-bottom: 25px;
+      }
+
+      .post-slide .post-date {
+        color: #a9a9a9;
+        font-size: 14px;
+      }
+
+      .post-slide .post-date i {
+        font-size: 20px;
+        margin-right: 8px;
+        color: #cfdace;
+      }
+
+      .post-slide .read-more {
+        padding: 7px 20px;
+        float: right;
+        font-size: 12px;
+        background: #2196f3;
+        color: #ffffff;
+        box-shadow: 0px 10px 20px -10px #1376c5;
+        border-radius: 25px;
+        text-transform: uppercase;
+      }
+
+      .post-slide .read-more:hover {
+        background: #3498db;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .owl-controls .owl-buttons {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .owl-controls .owl-buttons .owl-prev {
+        background: #fff;
+        position: absolute;
+        top: -13%;
+        left: 15px;
+        padding: 0 18px 0 15px;
+        border-radius: 50px;
+        box-shadow: 3px 14px 25px -10px #92b4d0;
+        transition: background 0.5s ease 0s;
+      }
+
+      .owl-controls .owl-buttons .owl-next {
+        background: #fff;
+        position: absolute;
+        top: -13%;
+        right: 15px;
+        padding: 0 15px 0 18px;
+        border-radius: 50px;
+        box-shadow: -3px 14px 25px -10px #92b4d0;
+        transition: background 0.5s ease 0s;
+      }
+
+      .owl-controls .owl-buttons .owl-prev:after,
+      .owl-controls .owl-buttons .owl-next:after {
+        content: "\f104";
+        font-family: FontAwesome;
+        color: #333;
+        font-size: 30px;
+      }
+      
+      .data-block {
+        background-color: rgb(221, 221, 221); /* Darker background for data block */
+        padding: 15px;
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+        height: 40%; /* Adjusted height to fit into the card */
+      }
+
+      .owl-controls .owl-buttons .owl-next:after {
+        content: "\f105";
+      }
+
+      @media only screen and (max-width: 1280px) {
+        .post-slide .post-content {
+          padding: 0px 15px 25px 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+        <div class="top-header">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-12 col-sm-8 col-md-6">
+                <div class="header-contact">
+                  <ul>
+                    <!-- <li class="tel"><a href="tel:+917891234567">+91-7891234567</a></li> -->
+                    <li class="mail">
+                      <a href="mailto:admin@lillahservices.org"
+                        >admin@lillahservices.org</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-6">
+                <div class="header-social">
+                  <ul class="d-flex justify-content-end">
+                    <li>
+                      Follow us on
+                      <a
+                        href="https://www.facebook.com/Lillah-Services-INC-108481111666259/"
+                        target="_blank"
+                        ><i class="fa-brands fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <!-- <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                      <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="home.html"
+              ><img src="images/lillah-logo.webp" alt="" /><small
+                >Dignity above all</small
+              ></a
+            >
+            <div class="header-donate order-lg-last">
+              <ul>
+                <li>
+                  <a href="donate.html" target="_blank" class="btn">Donate</a>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul
+                class="navbar-nav navbar-nav-scroll"
+                style="--bs-scroll-height: 100px"
+              >
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html"
+                    >Home</a
+                  >
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li> -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarScrollingDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    About
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="about.html">About us</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="code-of-ethics.html"
+                        >Code of Ethics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="our-work.html">Our Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="spotlight.html">Spotlight</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="our-team.html">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="corporate-match.html"
+                    >Corporate Match</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Demo</a>
+                  </li> -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="hero p-0">
+        <figure>
+          <img src="images/hero-banner1.jpg" alt="" />
+          <figcaption>Dignity Above All</figcaption>
+        </figure>
+       
+                
+        <div class="hero-content " style="width: 40%;">
+          <div style="text-align: center; font-size: 20px; font-weight: bold; color: #fff; font-family: Verdana,sans-serif; margin-bottom: 5px;">Dignity Above All</div>
+        <div class="donationMessage" style="text-align: center;">
+             
+            <script type="text/javascript" defer src="https://donorbox.org/install-popup-button.js"></script>
+            <a class="dbox-donation-button" 
+               style="background: #333 url(https://donorbox.org/images/white_logo.svg) no-repeat 45px; 
+                      color: #fff; 
+                      text-decoration: none; 
+                      font-family: Verdana,sans-serif; 
+                      display: inline-block; 
+                      font-size: 16px; 
+                      padding: 15px 45px; 
+                      padding-left: 70px; 
+                      border-radius: 8px;" 
+               href="https://donorbox.org/generic-campaign">
+               Donate
+            </a>
+        </div>
+        </div>
+  
+             
+      </section>
+      
+    <div class="container-fluid  mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="common-heading center-heading">
+            <h2>Fundraiser Spotlights</h2>
+          </div>
+          <div id="news-slider" class="owl-carousel">
+            <div class="post-slide">
+              <div class="post-img ml-2">
+                <img
+                  src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501"
+                  alt=""
+                />
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                <h3 class="post-title text-center">
+                  <a href="#">Recovery Care and Compassion</a>
+                </h3>
+                <p class="post-description">
+                  A hand pump donation of $200 includes site survey, boring, pump, labor, cement and plaque. A plaque will be installed at the site which can include the name of loved one for whom they are donating it as SADAQAH JARIYAH. Site photos will be provided to donor.
+                </p>
+                <div class="data-block" style="display: flex">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Fundraiser goal</span>
+                    <span style="color: red">$50,000</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Raised Amount</span>
+                    <span style="color: green">$50,000</span>
+                  </div>
+                </div>
+                
+                <div class="text-center mt-2">
+                <a href="#" class="btn">Donate</a>
+              </div>
+             
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img ml-2">
+                <img
+                  src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503"
+                  alt=""
+                />
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                   <h3 class="post-title text-center">
+                  <a href="#">Recovery Care and Compassion</a>
+                </h3>
+                <p class="post-description">
+                  A hand pump donation of $200 includes site survey, boring, pump, labor, cement and plaque. A plaque will be installed at the site which can include the name of loved one for whom they are donating it as SADAQAH JARIYAH. Site photos will be provided to donor.
+                </p>
+                <div class="data-block" style="display: flex">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Fundraiser goal</span>
+                    <span style="color: red">$50,000</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Raised Amount</span>
+                    <span style="color: green">$50,000</span>
+                  </div>
+                </div>
+                <div class="text-center mt-2">
+                <a href="#" class="btn">Donate</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img ml-2">
+                <img
+                  src="https://images.unsplash.com/photo-1564979268369-42032c5ca998?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=500"
+                  alt=""
+                />
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                   <h3 class="post-title text-center">
+                  <a href="#">Recovery Care and Compassion</a>
+                </h3>
+                <p class="post-description">
+                  A hand pump donation of $200 includes site survey, boring, pump, labor, cement and plaque. A plaque will be installed at the site which can include the name of loved one for whom they are donating it as SADAQAH JARIYAH. Site photos will be provided to donor.
+                </p>
+                <div class="data-block" style="display: flex">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Fundraiser goal</span>
+                    <span style="color: red">$50,000</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Raised Amount</span>
+                    <span style="color: green">$50,000</span>
+                  </div>
+                </div>
+                <div class="text-center mt-2">
+                <a href="#" class="btn">Donate</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img ml-2">
+                <img
+                  src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501"
+                  alt=""
+                />
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                   <h3 class="post-title text-center">
+                  <a href="#">Recovery Care and Compassion</a>
+                </h3>
+                <p class="post-description">
+                  A hand pump donation of $200 includes site survey, boring, pump, labor, cement and plaque. A plaque will be installed at the site which can include the name of loved one for whom they are donating it as SADAQAH JARIYAH. Site photos will be provided to donor.
+                </p>
+                <div class="data-block" style="display: flex">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Fundraiser goal</span>
+                    <span style="color: red">$50,000</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Raised Amount</span>
+                    <span style="color: green">$50,000</span>
+                  </div>
+                </div>
+                <div class="text-center mt-2">
+                <a href="#" class="btn">Donate</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img ml-2">
+                <img
+                  src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505"
+                  alt=""
+                />
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                   <h3 class="post-title text-center">
+                  <a href="#">Recovery Care and Compassion</a>
+                </h3>
+                <p class="post-description">
+                  A hand pump donation of $200 includes site survey, boring, pump, labor, cement and plaque. A plaque will be installed at the site which can include the name of loved one for whom they are donating it as SADAQAH JARIYAH. Site photos will be provided to donor.
+                </p>
+                <div class="data-block" style="display: flex">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Fundraiser goal</span>
+                    <span style="color: red">$50,000</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Raised Amount</span>
+                    <span style="color: green">$50,000</span>
+                  </div>
+                </div>
+                <div class="text-center mt-2">
+                <a href="#" class="btn">Donate</a>
+              </div>
+              </div>
+            </div>
+
+            <div class="post-slide">
+              <div class="post-img ml-2">
+                <img
+                  src="https://images.unsplash.com/photo-1484656551321-a1161420a2a0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=306&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=506"
+                  alt=""
+                />
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                   <h3 class="post-title text-center">
+                  <a href="#">Recovery Care and Compassion</a>
+                </h3>
+                <p class="post-description">
+                  A hand pump donation of $200 includes site survey, boring, pump, labor, cement and plaque. A plaque will be installed at the site which can include the name of loved one for whom they are donating it as SADAQAH JARIYAH. Site photos will be provided to donor.
+                </p>
+                <div class="data-block" style="display: flex">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Fundraiser goal</span>
+                    <span style="color: red">$50,000</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      flex: 1;
+                    "
+                  >
+                    <span>Raised Amount</span>
+                    <span style="color: green">$50,000</span>
+                  </div>
+                </div>
+                <div class="text-center mt-2">
+                <a href="#" class="btn">Donate</a>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+       <!-- about section -->
+       <section class="about">
+        <div class="custom-wrapper">
+        <div class="row">
+        <div class="col-12">
+        <div class="common-heading center-heading">
+        <h2 style="text-align: center;">About Lillah Services</h2>
+        </div>
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="col-12 col-lg-12">
+        <div class="custom-wrapper">
+        <div class="row">
+        <div class="col-12 col-lg-6"><!-- about content -->
+        <div class="home-about-content"><!--div class="common-heading">
+                                    <h2>About Lillah Services</h2>
+                                </div-->
+        <p>Lillah Services is committed to serving and bringing dignity, health and hope to underprivileged individuals and families. Our teams conduct due diligence on each and every case to prevent fraud by personally:</p>
+        
+        <ul>
+          <li>1) Validating the financial situation of potential recipients.</li>
+          <li>2) Speaking with doctors, hospitals, pharmacies and schools to assess treatment cost to ensure the best treatment at the lowest cost.</li>
+          <li>3) Only paying the service provider directly.</li>
+        </ul>
+        &nbsp;
+        
+        <p>Your support makes all of this possible!</p>
+        <a class="btn" href="about.html">Read More</a></div>
+        <!-- about content --></div>
+        <!-- work slider -->
+        
+        <div class="col-12 col-lg-6">
+        <div class="project-swiper">
+        <div class="swiper mySwiper" id="latest-project">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        <figure><img alt="" src="images/latest-project1.jpg" /> <!-- <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption> --></figure>
+        </div>
+        
+        <div class="swiper-slide">
+        <figure><img alt="" src="images/engagement1.jpg" /> <!-- <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption> --></figure>
+        </div>
+        
+        <div class="swiper-slide">
+        <figure><img alt="" src="images/engagement2.jpg" /> <!-- <figcaption>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</figcaption> --></figure>
+        </div>
+        
+        <div class="swiper-slide">
+        <figure><img alt="" src="images/engagement3.jpg" /> <!-- <figcaption>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </figcaption> --></figure>
+        </div>
+        
+        <div class="swiper-slide">
+        <figure><img alt="" src="images/engagement4.jpg" /> <!-- <figcaption>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption> --></figure>
+        </div>
+        </div>
+        </div>
+        
+        <div class="swiper-pagination"></div>
+        </div>
+        </div>
+        <!-- work slider --></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    <!-- about section -->
+
+
+    <!-- feature section -->
+    <section class="impact">
+      <div class="custom-wrapper">
+        <div class="row">
+          <div class="col-12">
+            <div class="common-heading center-heading">
+              <h2>Make an Impact</h2>
+            </div>
+          </div>
+        </div>
+        <div class="impact-section">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="impact-block">
+                <figure>
+                  <img src="images/basic-need.jpg" alt="" />
+                </figure>
+                <h3>Basic Needs</h3>
+                <p>Food Insecurity Assistance</p>
+                <a href="our-work.html#basic-need" class="btn">View All</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="impact-block">
+                <figure>
+                  <img src="images/medical.jpg" alt="" />
+                </figure>
+                <h3>Critical Medical Care</h3>
+                <p>Emergency & Chronic Ailment Assistance</p>
+                <a href="our-work.html#critical-care" class="btn">View All</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="impact-block">
+                <figure>
+                  <img src="images/education.jpg" alt="" />
+                </figure>
+                <h3>Education</h3>
+                <p>Primary and Secondary Education Assistance</p>
+                <a href="our-work.html#education" class="btn">View All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feature section -->
+
+    <!-- engagement section-->
+    <section class="engagement">
+      <div class="custom-wrapper">
+        <div class="row">
+          <div class="col-12">
+            <div class="common-heading center-heading">
+              <h2>Engagement</h2>
+              <p><span>Many ways to support</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="engagement-block-area">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="engagement-block">
+                <figure><img src="images/engagement1.jpg" alt="" /></figure>
+                <h4>Case Workers & Med Professionals</h4>
+                <p>Join our team and give back to humanity</p>
+                <a href="case-worker.html" class="btn">Read More</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="engagement-block">
+                <figure><img src="images/engagement2.jpg" alt="" /></figure>
+                <h4>Monetary Donation</h4>
+                <p>Simple and quick...</p>
+                <a href="donate.html" class="btn">Read More</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="engagement-block">
+                <figure><img src="images/engagement3.jpg" alt="" /></figure>
+                <h4>Corporate Match Donation</h4>
+                <p>Many corporations will match your donation.</p>
+                <a href="corporate-match.html" class="btn">Read More</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="engagement-block">
+                <figure><img src="images/engagement4.jpg" alt="" /></figure>
+                <h4>Partnerships</h4>
+                <p>
+                  Companies you shop from will donate a percentage of sales to
+                  Lillah Services.
+                </p>
+                <a href="partnership.html" class="btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- engagement section-->
+<!-- footer -->
+<footer>
+  <div class="custom-wrapper">
+    <div class="row">
+      <!-- <div class="col-12 col-lg-4 col-xl-4">
+          <div class="footer-content">
+            <h4>Lillah Services Inc.</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888500.9270710503!2d77.27735362078649!3d17.86841658618677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3350db9429ed43%3A0x63ef7ba741594059!2sTelangana!5e0!3m2!1sen!2sin!4v1646221644844!5m2!1sen!2sin" width="80%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div> -->
+      <div class="col-12 col-lg-4 col-xl-4">
+        <div class="footer-content ps-lg-5">
+          <h4>Connect with us</h4>
+          <ul>
+            <!-- <li><i class="fa-solid fa-location-crosshairs"></i><a href="#">Your Address</a></li>
+              <li><i class="fa-solid fa-phone"></i><a href="tel:+917891234567">+91-7891234567</a></li> -->
+            <li>
+              <i class="fa-solid fa-envelope"></i
+              ><a href="mailto:admin@lillahservices.org"
+                >admin@lillahservices.org</a
+              >
+            </li>
+          </ul>
+          <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul class="d-flex">
+              <li>
+                <a
+                  href="https://www.facebook.com/Lillah-Services-INC-108481111666259/"
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook-square"></i
+                ></a>
+              </li>
+              <!-- <li><a href="https://twitter.com/CloudInfomatic" target="_blank"><i class="fa-brands fa-twitter-square"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/cloudinfomatics" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 col-xl-4">
+        <div class="footer-content">
+          <h4>Quick Link</h4>
+          <ul>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="our-work.html">Our Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="our-team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="corporate-match.html">Corporate Match</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html">Contact</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a href="privacy-policy.html">Privacy Ploicy</a>
+              </li>
+              <li class="nav-item">
+                <a href="term-condition.html">Terms and Conditions</a>
+              </li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 col-xl-4">
+        <div class="footer-content border-0 m-0 p-0">
+          <h4>Signup for our newsletter</h4>
+          <form
+            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+            method="POST"
+            id="subscribe_form"
+          >
+            <input type="hidden" name="oid" value="00D5f000005U9pG" />
+            <input
+              type="hidden"
+              name="retURL"
+              value="http://lillahservices.org/newsletter-thank-you.html"
+            />
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="subscribe_first_name"
+                placeholder="First Name"
+                name="first_name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="subscribe_last_name"
+                placeholder="Last Name"
+                name="last_name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="subscribe_email"
+                placeholder="Email"
+                name="email"
+              />
+            </div>
+            <input
+              id="company"
+              maxlength="40"
+              name="company"
+              size="20"
+              type="hidden"
+              value="subscriber"
+            />
+            <input
+              type="button"
+              value="Subscribe"
+              name="btn_submit"
+              onclick="submitSubcribe()"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                &copy; 2022. <a href="#">Lillah Services</a>. All right
+                reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer -->
+
+
+
+    <script src="js/popper.min.js"></script>
+ 
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- JavaScript SDK -->
+    <!-- <script
+      src="https://www.paypal.com/sdk/js?components=buttons,hosted-fields&client-id=AZ-YAY4KF5x7l0rLoWe5FtF5DM09W6rdV4UqRgpFNs46JKlOaFFK2AdPzdLealswPFgpBO76Z1FoVb-I"
+      data-page-type="checkout"
+    ></script> -->
+
+
+    <script src="js/carousel.js"></script>
+    <!-- Implementation -->
+    <script>
+      ///subscribe defination
+
+      function submitSubcribe() {
+        var subscribe_first_name = document.getElementById(
+          "subscribe_first_name"
+        ).value;
+        var subscribe_last_name = document.getElementById(
+          "subscribe_last_name"
+        ).value;
+        var subscribe_email = document.getElementById("subscribe_email").value;
+
+        if (!subscribe_first_name || !subscribe_last_name || !subscribe_email) {
+          alert("Please enter the basic details before subscribe");
+          return false;
+        } else {
+          document.getElementById("subscribe_form").submit(); //formid
+        }
+      }
+
+      let orderId;
+
+      // Displays PayPal buttons
+      paypal
+        .Buttons({
+          style: {
+            layout: "horizontal",
+          },
+
+          // onInit is called when the button first renders
+          onInit: function (data, actions) {
+            // Disable the buttons
+            actions.disable();
+
+            // Listen for changes to the checkbox
+            document
+              .querySelector("#check")
+              .addEventListener("change", function (event) {
+                var first_name = document.getElementById("first_name").value;
+                var last_name = document.getElementById("last_name").value;
+                var phone = document.getElementById("phone").value;
+                var email = document.getElementById("email").value;
+                var company = document.getElementById("company").value;
+                var city = document.getElementById("city").value;
+                var state = document.getElementById("state").value;
+                var donation_focus =
+                  document.getElementById("donation_focus").value;
+                var donationAmount =
+                  document.getElementById("00N5f00000eUeLW").value;
+
+                if (
+                  !first_name ||
+                  !last_name ||
+                  !phone ||
+                  !email ||
+                  !company ||
+                  !city ||
+                  !state ||
+                  !donation_focus | !donationAmount
+                ) {
+                  alert("Please enter the basic details before donation");
+                  document.getElementById("check").checked = false;
+                  return false;
+                } else {
+                  if (isNaN(donationAmount)) {
+                    alert("Donation amount is not a number");
+                    document.getElementById("check").checked = false;
+                    return false;
+                  }
+
+                  if (isNaN(phone)) {
+                    alert("Phone number is not a number");
+                    document.getElementById("check").checked = false;
+                    return false;
+                  }
+
+                  var validRegex =
+                    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                  if (!email.match(validRegex)) {
+                    alert("Email is not valid");
+                    document.getElementById("check").checked = false;
+                    return false;
+                  }
+                }
+
+                // Enable or disable the button when it is checked or unchecked
+                if (event.target.checked) {
+                  actions.enable();
+                } else {
+                  actions.disable();
+                }
+              });
+          },
+
+          // onClick is called when the button is clicked
+          onClick: function () {
+            console.log("click on bttn");
+
+            var first_name = document.getElementById("first_name").value;
+            var last_name = document.getElementById("last_name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var company = document.getElementById("company").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+            var donation_focus =
+              document.getElementById("donation_focus").value;
+            var donationAmount =
+              document.getElementById("00N5f00000eUeLW").value;
+
+            if (
+              !first_name ||
+              !last_name ||
+              !phone ||
+              !email ||
+              !company ||
+              !city ||
+              !state ||
+              !donation_focus ||
+              !donationAmount
+            ) {
+              alert("Please enter the basic details before donation");
+
+              return false;
+            }
+            if (isNaN(donationAmount)) {
+              alert("Donation amount is not a number");
+              return false;
+            }
+
+            if (isNaN(phone)) {
+              alert("Phone number is not a number");
+              return false;
+            }
+
+            var validRegex =
+              /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (!email.match(validRegex)) {
+              alert("Email is not valid");
+              return false;
+            }
+
+            if (!document.getElementById("check").checked) {
+              alert("Please tick the checkbox to confirm the details.");
+            }
+          },
+
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: document.getElementById("00N5f00000eUeLW").value,
+                  },
+                },
+              ],
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+              document.getElementById("donorform").submit();
+              // window.location.href = '/success.html';
+            });
+          },
+        })
+        .render("#paypal-button-container");
+
+      // If this returns false or the card fields aren't visible, see Step #1.
+      if (paypal.HostedFields.isEligible()) {
+        // Renders card fields
+        paypal.HostedFields.render({
+          // Call your server to set up the transaction
+          createOrder: function () {
+            return fetch("/your-server/paypal/order", {
+              method: "post",
+            })
+              .then(function (res) {
+                return res.json();
+              })
+              .then(function (orderData) {
+                orderId = orderData.id;
+                return orderId;
+              });
+          },
+
+          styles: {
+            ".valid": {
+              color: "green",
+            },
+            ".invalid": {
+              color: "red",
+            },
+          },
+
+          fields: {
+            number: {
+              selector: "#card-number",
+              placeholder: "4111 1111 1111 1111",
+            },
+            cvv: {
+              selector: "#cvv",
+              placeholder: "123",
+            },
+            expirationDate: {
+              selector: "#expiration-date",
+              placeholder: "MM/YY",
+            },
+          },
+        }).then(function (cardFields) {
+          document
+            .querySelector("#card-form")
+            .addEventListener("submit", (event) => {
+              event.preventDefault();
+
+              cardFields
+                .submit({
+                  // Cardholder's first and last name
+                  cardholderName:
+                    document.getElementById("card-holder-name").value,
+                  // Billing Address
+                  billingAddress: {
+                    // Street address, line 1
+                    streetAddress: document.getElementById(
+                      "card-billing-address-street"
+                    ).value,
+                    // Street address, line 2 (Ex: Unit, Apartment, etc.)
+                    extendedAddress: document.getElementById(
+                      "card-billing-address-unit"
+                    ).value,
+                    // State
+                    region: document.getElementById(
+                      "card-billing-address-state"
+                    ).value,
+                    // City
+                    locality: document.getElementById(
+                      "card-billing-address-city"
+                    ).value,
+                    // Postal Code
+                    postalCode: document.getElementById(
+                      "card-billing-address-zip"
+                    ).value,
+                    // Country Code
+                    countryCodeAlpha2: document.getElementById(
+                      "card-billing-address-country"
+                    ).value,
+                  },
+                })
+                .then(function () {
+                  fetch("/your-server/api/order/" + orderId + "/capture/", {
+                    method: "post",
+                  })
+                    .then(function (res) {
+                      return res.json();
+                    })
+                    .then(function (orderData) {
+                      // Three cases to handle:
+                      //   (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
+                      //   (2) Other non-recoverable errors -> Show a failure message
+                      //   (3) Successful transaction -> Show confirmation or thank you
+
+                      // This example reads a v2/checkout/orders capture response, propagated from the server
+                      // You could use a different API or structure for your 'orderData'
+                      var errorDetail =
+                        Array.isArray(orderData.details) &&
+                        orderData.details[0];
+
+                      if (
+                        errorDetail &&
+                        errorDetail.issue === "INSTRUMENT_DECLINED"
+                      ) {
+                        return actions.restart(); // Recoverable state, per:
+                        // https://developer.paypal.com/docs/checkout/integration-features/funding-failure/
+                      }
+
+                      if (errorDetail) {
+                        var msg =
+                          "Sorry, your transaction could not be processed.";
+                        if (errorDetail.description)
+                          msg += "\n\n" + errorDetail.description;
+                        if (orderData.debug_id)
+                          msg += " (" + orderData.debug_id + ")";
+                        return alert(msg); // Show a failure message
+                      }
+
+                      // Show a success message or redirect
+                      alert("Transaction completed!");
+                    });
+                })
+                .catch(function (err) {
+                  alert(
+                    "Payment could not be captured! " + JSON.stringify(err)
+                  );
+                });
+            });
+        });
+      } else {
+        // Hides card fields if the merchant isn't eligible
+        document.querySelector("#card-form").style = "display: none";
+      }
+     
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#news-slider").owlCarousel({
+          items: 3,
+          itemsDesktop: [1199, 3],
+          itemsDesktopSmall: [980, 2],
+          itemsMobile: [600, 1],
+          navigation: true,
+          navigationText: ["", ""],
+          pagination: true,
+          autoPlay: true,
+        });
+      });
+    </script>
+  </body>
+</html>

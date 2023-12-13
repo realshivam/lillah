@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom styles */
+      .modal-dialog {
+        margin: 50px auto; /* Adjust the margin as needed */
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .modal.fade.show {
+        backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
+      }
+
+      .nav-pills .nav-link {
+        border-radius: 50%; /* Make the pills circular */
+        margin-right: 10px;
+        padding: 10px 15px;
+        background-color: #ddd; /* Background color of the pills */
+        color: #333; /* Text color of the pills */
+      }
+
+      .nav-pills .nav-link.active {
+        background-color: #007bff; /* Active pill background color */
+        color: #fff; /* Active pill text color */
+      }
+
+      /* Custom styles for Tab 1 header */
+      #tab1-header {
+        background-color: #ffc107; /* Yellow background color */
+        padding: 15px;
+        border-radius: 5px 5px 0 0;
+      }
+
+      #tab1-header h2 {
+        margin: 0;
+        color: #333; /* Text color of the header */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Button to open the modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Open Modal
+    </button>
+
+    <!-- The Modal -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <!-- Modal content -->
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <ul class="nav nav-pills" id="myTabs">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="tab1-tab"
+                data-toggle="pill"
+                href="#tab1"
+              >
+                <span class="dot"></span>
+                <!-- Dot icon for Tab 1 -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab2-tab" data-toggle="pill" href="#tab2">
+                <span class="dot"></span>
+                <!-- Dot icon for Tab 2 -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab3-tab" data-toggle="pill" href="#tab3">
+                <span class="dot"></span>
+                <!-- Dot icon for Tab 3 -->
+              </a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tab1">
+              <!-- Tab 1 Header -->
+              <div id="tab1-header">
+                <h2>Choose Amount</h2>
+              </div>
+              <!-- Tab 1 Content -->
+              <div>
+                <p>This is the content of Tab 1.</p>
+                <!-- Add your content here -->
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab2">
+              <h2>Content for Tab 2</h2>
+              <p>This is the content of Tab 2.</p>
+            </div>
+
+            <div class="tab-pane fade" id="tab3">
+              <h2>Content for Tab 3</h2>
+              <p>This is the content of Tab 3.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

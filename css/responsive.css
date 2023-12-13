@@ -1,0 +1,299 @@
+@media screen and (min-width: 1601px) and (max-width: 1919px) {
+    .hero figure figcaption {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1600px) {
+    .hero figure figcaption {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1366px) {
+    .custom-wrapper {
+        width: 95%;
+    }
+    .hero figure figcaption {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+    .hero figure figcaption {
+        display: none;
+    }
+    .custom-wrapper {
+        width: 90%;
+    }
+    .impact-section figure {
+        height: 194px;
+    }
+    .engagement-block figure {
+        height: 140px;
+        margin: 0 0 15px 0;
+    }
+    .team-member-block {
+        height: 300px;
+    }
+    .team-member-block figure {
+        height: 100%;
+    }
+    .team-member-block-content {
+        overflow: auto;
+    }
+    .team-section {
+        padding: 0 30px 0px;
+    }
+    .contact-information {
+        padding: 0 0 0 50px;
+    }
+    .fund-amount{
+        display: block;
+        padding: 10px;
+    }
+    .fund-amount span{
+        display: block;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hero figure figcaption {
+        display: none;
+    }
+    .custom-wrapper {
+        width: 80%;
+    }
+    .hero {
+        height: 700px;
+    }
+    .hero.increase-height {
+        height: 1100px;
+    }
+    .navbar-collapse {
+        background: rgb(255 255 255);
+        padding: 30px 20px;
+        position: fixed;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        border-top: 1px dashed #d1d1d1;
+        box-shadow: 0 5px 10px #dfdfdf;
+    }
+    .navbar-nav-scroll {
+        max-height: 100%;
+        overflow-y: visible;
+    }
+    .navbar-nav .dropdown-menu {
+        margin: 0;
+        padding: 15px;
+        background: #e6e6e6;
+        border-radius: 8px;
+    }
+    .dropdown-item {
+        height: 30px;
+        border: 0;
+    }
+    .credit {
+        width: 100%;
+    }
+    .credit img {
+        width: 100%;
+    }
+    .collapsing {
+        -webkit-transition: none;
+        transition: none;
+        display: none;
+    }
+    .navbar-brand img {
+        height: 46px;
+    }
+    .impact-block {
+        margin-bottom: 30px;
+    }
+    .impact-section figure {
+        margin: 0 0 20px 0;
+    }
+    .footer-content {
+        border-bottom: 1px solid #3b4a5b;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    .hero-content {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .home-about-content {
+        margin: 0 0 50px 0;
+        padding: 0;
+    }
+    .common-heading {
+        width: 100%;
+    }
+    h2,
+    .common-heading h1 {
+        font-size: 28px;
+    }
+    .engagement-block {
+        margin-bottom: 20px;
+    }
+    .engagement-block figure {
+        height: 196px;
+    }
+    .footer-content iframe {
+        min-width: 100%;
+    }
+    .donate-form {
+        margin: 0 0 50px 0;
+    }
+    .contact-information {
+        padding: 0;
+    }
+    .case-worker {
+        padding-left: 0px;
+    }
+    .spotlight-update{
+        margin: 70px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero {
+        height: auto;
+    }
+    .hero.increase-height {
+        height: auto;
+    }
+    .hero-content {
+        position: relative;
+        top: 0;
+        transform: inherit;
+        margin: 30px auto;
+        background: rgb(242 188 5);
+    }
+    .hero figure figcaption {
+        display: block;
+        position: absolute;
+        font-size: 40px;
+        z-index: 3;
+        bottom: 10%;
+        color: white;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 800;
+    }
+    .impact-section figure {
+        height: 314px;
+    }
+    .engagement-block figure {
+        height: 320px;
+    }
+    .navbar-brand small {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .hero-content {
+        width: 90%;
+        padding: 20px 25px 30px;
+    }
+    .header-social {
+        display: none;
+    }
+    .header-contact ul {
+        justify-content: center;
+    }
+    .hero figure figcaption {
+        font-size: 28px;
+    }
+    .hero-content form .form-check {
+        margin: 0 10px 10px 0;
+    }
+    .hero-content form .form-check .form-check-input {
+        left: 37px;
+    }
+    .hero-content form .form-check label {
+        padding-left: 37px;
+        font-size: 11px;
+    }
+    .hero-content h1 {
+        border-bottom: 1px dashed rgb(255 231 149);
+    }
+    .impact-section figure {
+        height: 218px;
+    }
+    .engagement-block figure {
+        height: 220px;
+    }
+    .team-member-block {
+        height: auto;
+        flex-direction: column;
+    }
+    .team-member-block figure {
+        width: 100%;
+        height: 350px;
+    }
+    .team-member-block-content {
+        width: 100%;
+    }
+    .donate-form {
+        padding: 30px;
+    }
+    .team-section {
+        padding: 0;
+        background: transparent;
+        border: 0;
+        margin-bottom: 0;
+    }
+
+    .spotlight-update{
+        margin: 70px 0 0 0;
+    }
+}
+
+
+/* -- multi dropdown --*/
+
+@media all and (min-width: 992px) {
+    .dropdown-menu li {
+        position: relative;
+    }
+    .nav-item .submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0px;
+    }
+    .nav-item .submenu-left {
+        right: 100%;
+        left: auto;
+    }
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+    }
+}
+
+
+/* ============ desktop view .end// ============ */
+
+
+/* ============ small devices ============ */
+
+@media (max-width: 991px) {
+    .dropdown-menu .dropdown-menu {
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        margin-bottom: .5rem;
+    }
+}
+
+
+/* ============ small devices .end// ============ */
