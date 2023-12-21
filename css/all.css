@@ -9769,6 +9769,9 @@ body {
   margin-top: -40px;
   border-radius: 10px;
 }
+.volunteer:hover .text {
+  display: none;
+}
 .volunteer .text h3 {
   color: #fff;
   font-size: 18px;
@@ -9798,4 +9801,63 @@ body {
   text-transform: uppercase;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+}
+
+.cont {
+  position: relative;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0 50% 0 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+
+.cont:hover .overlay {
+  opacity: 1;
+}
+
+.textOverlay {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  max-height: 100%;
+  max-width: fit-content;
+  text-justify: distribute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: left;
+  overflow-y: auto;
+}
+
+.textOverlay::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+.desig {
+  z-index: 10000000;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
