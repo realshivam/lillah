@@ -9832,6 +9832,32 @@ body {
   opacity: 1;
 }
 
+.overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the last value (alpha) for transparency */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay2 h5,
+.overlay2 p {
+  margin: 0;
+}
+
 .textOverlay {
   color: white;
   font-size: 15px;
@@ -9948,7 +9974,7 @@ button:focus {
 
 .card1 {
   padding: 30px 40px;
-  margin-top: 60px;
+
   margin-bottom: 60px;
   border: none !important;
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
@@ -9993,8 +10019,6 @@ textarea:focus {
 /*form styles*/
 #msform {
   text-align: center;
-  position: relative;
-  margin-top: 30px;
 }
 
 #msform fieldset {
@@ -10173,4 +10197,18 @@ textarea:focus {
 .dme_link a:focus {
   background: #c5c5f1;
   text-decoration: none;
+}
+.custom-list .list-group-item {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding-left: 40px;
+}
+
+.custom-list .list-group-item::before {
+  content: "\2022";
+  font-size: 30px;
+  color: orange;
+  position: absolute;
+  left: 15px;
 }
